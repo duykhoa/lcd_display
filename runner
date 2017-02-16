@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative 'lcd_display'
+
+args = ARGV
+puts args.inspect
+size = args[0].to_i || 2
+values = args[1].to_i || 12345
+LCDDisplay.new(size, values).display
